@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* ============ Universal Styles ============ */
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    margin: 0;
+    padding: 0;
+}
+.col-12{
+    padding: 0;
+}
+.leftSide{
+    background: #00082E;
+    height: 100%;
+    position: fixed;
+    transition: 1s;
+    width: 250px;
+    z-index: 99999999999;
+}
+.leftSide.active{
+    width: 250px;
+}
+.leftSide ul{
+   margin: 0;
+   padding: 0;
+    width: 100%;
+}
+
+.leftSide ul a{
+    text-decoration: none;
+}
+.leftSide ul a li{
+    background:#002147;
+    color: #fff;
+    list-style: none;
+    margin: 5px auto;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+.leftSide ul a li:before{
+    content: '';
+    background:rgba(241, 14, 82, .5);
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    width: 0;
+}
+.leftSide ul a li:hover::before{
+    content: '';
+    width: 100%;
+}
+.leftSide ul a.active li{
+    border-left: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+}
+.leftSide ul li span i{
+    color: #ff0;
+    font-size: 18px;
+    padding-right: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+.rightSide{
+    background:#fff;
+    float: right;
+    height:100%;
+    width:82%;
+}
+.rightSide::before{
+    content: "";
+    clear:both;
+}
+.topNavLeft{
+    background: palevioletred;
+    display:none;
+    height: 45px;
+}
+.topNav{
+    height: 45px;
+}
+.topNav .left{
+    height: 45px;
+}
+.topNav .right{
+    height: 45px;
+}
+img{
+    height: 45px;
+    margin-left: -10px;
+    width: 45px;
+}
+p.username{
+    color:#fff;
+    font-size: 20px;
+    line-height: 45px;
+}
+.topNavMobile{
+    background: green;
+    display: none;
+    height: 45px;
+}
+.toggle{
+    background: #00082E;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    z-index: 99999999;
+}
+.toggle.active{
+    background: #002147;
+    z-index: 9999999;
+}
+.toggle span{
+    height: 7vh;
+    line-height: 7vh;
+
+}
+.toggle span i.bi{
+    font-size: 50px;
+}
+
+/* =============== Login Style =============== */
+.loginBox{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.loginSideBox{
+    background-image: url('../assets/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.loginRightBox{
+    background-image: url('../assets/3.jfif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.mainFormBox{
+    background: rgba(153, 153, 153, 1);
+}
+
+
+
+/* =============== Create Customer Styles =============== */
+.form-CC input, .form-CC select{
+    padding: 10px;
+    width:100%;
+}
+.form-CC textarea{
+    height: 150px;
+    width: 100%;
+}
+.add-image{
+    /* background: red; */
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+.add-image .box{
+    /* background: blue; */
+    height: 350px;
+    width: 350px;
+}
+.box .wrapper{
+    align-items: center;
+    /* background: green; */
+    border: 2pX dotted #c2cdda;
+    border-radius: 10px;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    top:25px;
+    width: 100%;
+}
+.wrapper label{
+    /* border: 1px solid #ffc107; */
+    cursor: pointer;
+    display: block;
+    font-size: 150px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+
+
+
+
+
+/* =============== Mobile Responsive Styles =============== */
+@media (max-width: 767px){
+    .loginBox{
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px!important;
+    }
+    .leftSide{
+        left: -400px;
+    }
+    .leftSide.active{
+        left: 0;
+        width:100%;
+    }
+    .rightSide{
+        width:100%;
+    }
+    .topNavLeft{
+        background: palevioletred;
+        display:block;
+    }
+    .topNav{
+        display: none;
+    }
+    .topNavMobile{
+        display: block;
+    }
+    .toggle{
+        display: block;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
